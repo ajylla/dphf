@@ -1,6 +1,7 @@
 # DPHF (Double Pendulum Hash Function)
 
-![](https://upload.wikimedia.org/wikipedia/commons/e/e4/Double_pendulum_predicting_dynamics.gif "Source: https://commons.wikimedia.org/wiki/File:Double_pendulum_predicting_dynamics.gif")
+<img align="right" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Double_pendulum_predicting_dynamics.gif"/>
+<!--![](https://upload.wikimedia.org/wikipedia/commons/e/e4/Double_pendulum_predicting_dynamics.gif "Source: https://commons.wikimedia.org/wiki/File:Double_pendulum_predicting_dynamics.gif")-->
 
 [Hash functions](https://en.wikipedia.org/wiki/Hash_function) are functions that take as input some arbitrary 
 length of data, and outputs a fixed length *hash*. Among other things, professional hash functions have the 
