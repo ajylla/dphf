@@ -40,4 +40,8 @@ There conditions are reflected in the tests I wrote for the function.
 
 Run: `python dphf.py <your string>`
 
+## DPHT (Double Pendulum Hash Table)
+
+See also folder dpht/ which implements a hash table using the DPHF as its hash function.
+
 [^1]: See for example this: https://www.myphysicslab.com/pendulum/double-pendulum-en.html

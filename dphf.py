@@ -1,4 +1,4 @@
-import numpy as np
+from numpy import sin, cos, pi
 from scipy.integrate import solve_ivp
 from sys import argv
 
@@ -16,19 +16,19 @@ def equations(t, y):
     theta1, theta2, omega1, omega2 = y
     delta_theta = theta1 - theta2
 
-    d_omega1 = (-g*(2*m1+m2)*np.sin(theta1) - m2*g*np.sin(theta1-2*theta2)
-               - 2*np.sin(delta_theta)*m2*((omega2**2)*l2+(omega1**2)*l1*np.cos(delta_theta)))/\
-               (l1*(2*m1+m2-m2*np.cos(2*theta1-2*theta2)))
+    d_omega1 = (-g*(2*m1+m2)*sin(theta1) - m2*g*sin(theta1-2*theta2)
+               - 2*sin(delta_theta)*m2*((omega2**2)*l2+(omega1**2)*l1*cos(delta_theta)))/\
+               (l1*(2*m1+m2-m2*cos(2*theta1-2*theta2)))
 
-    d_omega2 = (2*np.sin(delta_theta)*((omega1**2)*l1*(m1+m2)+g*(m1+m2)*np.cos(theta1)
-               +(omega2**2)*l1*np.cos(delta_theta)))/(l2*(2*m1+m2-m2*np.cos(2*theta1-2*theta2)))
+    d_omega2 = (2*sin(delta_theta)*((omega1**2)*l1*(m1+m2)+g*(m1+m2)*cos(theta1)
+               +(omega2**2)*l1*cos(delta_theta)))/(l2*(2*m1+m2-m2*cos(2*theta1-2*theta2)))
 
     return [omega1, omega2, d_omega1, d_omega2]
 
 def eval(theta1_0, theta2_0):
 
-    #theta1_0 = np.pi / 2
-    #theta2_0 = np.pi / 2
+    #theta1_0 = pi / 2
+    #theta2_0 = pi / 2
     omega1_0 = 0.0
     omega2_0 = 0.0
 
